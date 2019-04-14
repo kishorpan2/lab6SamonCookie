@@ -14,7 +14,7 @@ var pike = {
 pike.calcCustomersEachHour = function() {
   // generate a random number between min and max
   for (var i = 0; i < hourList.length; i++) {
-    this.custEachHour.push(rand(this.minCustPerHour, this.maxCustPerHour));
+    this.custEachHour.push(random(this.minCustPerHour, this.maxCustPerHour));
   }
 };
 pike.calcCookiesEachHour = function() {
@@ -40,7 +40,7 @@ pike.render = function() {
 };
 
 
-function rand(minCustPerHour, maxCustPerHour) {
+function random(minCustPerHour, maxCustPerHour) {
   // following line line MDN Math.random docs
   return Math.floor(parseInt((Math.random() * (maxCustPerHour - minCustPerHour + 1)) + minCustPerHour));
 }
@@ -61,7 +61,7 @@ var seattle = {
 seattle.calcCustomersEachHour = function() {
   // generate a random number between min and max
   for (var i = 0; i < hourList.length; i++) {
-    this.custEachHour.push((rand(this.minCustPerHour, this.maxCustPerHour)));
+    this.custEachHour.push((random(this.minCustPerHour, this.maxCustPerHour)));
   }
 };
 seattle.calcCookiesEachHour = function() {
@@ -86,11 +86,6 @@ seattle.render = function() {
 };
 
 
-function rand(minCustPerHour, maxCustPerHour) {
-  // following line line MDN Math.random docs
-  return Math.floor(parseInt((Math.random() * (maxCustPerHour - minCustPerHour + 1)) + minCustPerHour));
-}
-
 seattle.calcCustomersEachHour();
 seattle.calcCookiesEachHour();
 seattle.render();
@@ -107,7 +102,7 @@ var capitol = {
 capitol.calcCustomersEachHour = function() {
   // generate a random number between min and max
   for (var i = 0; i < hourList.length; i++) {
-    this.custEachHour.push(rand(this.minCustPerHour, this.maxCustPerHour));
+    this.custEachHour.push(random(this.minCustPerHour, this.maxCustPerHour));
   }
 };
 
@@ -132,12 +127,6 @@ capitol.render = function() {
   ulEl.appendChild(liEl);
 };
 
-
-function rando(minCustPerHour, maxCustPerHour) {
-  // following line line MDN Math.random docs
-  return Math.floor(parseInt((Math.random() * (maxCustPerHour - minCustPerHour + 1)) + minCustPerHour));
-}
-
 capitol.calcCustomersEachHour();
 capitol.calcCookiesEachHour();
 capitol.render();
@@ -154,7 +143,7 @@ var alki = {
 alki.calcCustomersEachHour = function() {
   // generate a random number between min and max
   for (var i = 0; i < hourList.length; i++) {
-    this.custEachHour.push(rand(this.minCustPerHour, this.maxCustPerHour));
+    this.custEachHour.push(random(this.minCustPerHour, this.maxCustPerHour));
   }
 };
 
@@ -180,12 +169,6 @@ alki.render = function() {
   ulEl.appendChild(liEl);
 };
 
-
-function rand(minCustPerHour, maxCustPerHour) {
-  // following line line MDN Math.random docs
-  return Math.floor(parseInt((Math.random() * (maxCustPerHour - minCustPerHour + 1)) + minCustPerHour));
-}
-
 alki.calcCustomersEachHour();
 alki.calcCookiesEachHour();
 alki.render();
@@ -202,7 +185,7 @@ var seatac = {
 seatac.calcCustomersEachHour = function() {
   // generate a random number between min and max
   for (var i = 0; i < hourList.length; i++) {
-    this.custEachHour.push(rand(this.minCustPerHour, this.maxCustPerHour));
+    this.custEachHour.push(random(this.minCustPerHour, this.maxCustPerHour));
   }
 };
 
@@ -227,12 +210,6 @@ seatac.render = function() {
   liEl.textContent = `Total: ${this.totalCookieForDay} cookies`;
   ulEl.appendChild(liEl);
 };
-
-
-function rand(minCustPerHour, maxCustPerHour) {
-  // following line line MDN Math.random docs
-  return Math.floor(parseInt((Math.random() * (maxCustPerHour - minCustPerHour + 1)) + minCustPerHour));
-}
 
 seatac.calcCustomersEachHour();
 seatac.calcCookiesEachHour();
